@@ -116,11 +116,12 @@ td, th{
 
 .site-header a{
     color: white;
-    margin-right: 30rem;
+    margin-right: 3rem;
 }
 
 .bar{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 10rem;
@@ -153,7 +154,7 @@ td, th{
     }
 }
 
-#menu{
+#menu:target{
     display: flex;
     flex-direction: column;
 }
@@ -226,7 +227,7 @@ td, th{
 /*site footer*/
 .site-footer{
     background-image: url(../img/encuentra.jpg);
-    height: 20vh;
+    height: 25vh;
     background-size: cover;
     color: white;
     margin-top: 5rem;
@@ -234,14 +235,16 @@ td, th{
 
 .site-ft-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    justify-content: center;
 }
 
 .footer-btn{
     background-color: var(--primary);
     color: white;
-    border-radius: 50px;
-    padding: 0.5rem;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem;
 }
 
 
@@ -357,3 +360,35 @@ legend{
     text-decoration: underline;
 }
 
+/*blog*/
+.blog-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem; 
+}
+
+@media(max-width:768px){
+    .blog-container{
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    } 
+}
+
+.blog-text{
+    background-color: var(--secondary);
+    padding: 0.5rem;
+}
+
+.blog-text p{
+    line-height: 1.5;
+}
+
+.blog-btn-details{
+    display: block;
+    background-color: aquamarine;
+    color: black;
+    border-radius: 25%;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
